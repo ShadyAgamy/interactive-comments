@@ -1,0 +1,241 @@
+@import '../sassStyles/variables';
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  min-height: 100%;
+
+}
+
+
+.container-fluid {
+  padding-right: 4rem;
+  padding-left: 4rem;
+}
+
+
+
+
+
+
+.btn-check:active+.btn-primary,
+.btn-check:checked+.btn-primary,
+.btn-primary.active,
+.btn-primary:active,
+.show>.btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: transparent;
+  border: none
+}
+
+.btn {
+  box-shadow: unset;
+  text-transform: capitalize;
+  padding: 9px 1.8rem;
+  font-size: 18px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: unset;
+    outline: unset;
+  }
+
+  &-primary {
+    color: #fff;
+    background-color: unset;
+    border: unset;
+    background-image: linear-gradient(to right, #FFFFFF66, #FFFFFF0D);
+    padding: 9px 1rem;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, .3);
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-image: linear-gradient(to right, #FFFFFF0D, #FFFFFF66);
+      background-color: unset;
+      box-shadow: unset !important;
+      border-color: rgba(255, 255, 255, .3);
+    }
+  }
+
+  &-primary-solid {
+    color: #fff;
+    background-color: $primaryColor;
+    border: 2px solid transparent;
+    transition: all .1s ease-in-out;
+    font-size: 18px;
+    padding: 10px 2.6rem;
+
+    &:hover,
+    &:active {
+      border-color: $secondaryColor;
+      background-color: transparent;
+      color: $primaryColor;
+    }
+  }
+
+  &-text {
+    background-color: transparent;
+    color: $primaryColor;
+    font-weight: 600;
+    border: unset;
+    padding: 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $primaryColor;
+    }
+
+    svg {
+      margin-left: 1rem;
+    }
+
+  }
+
+  &-secondery-outline {
+    border-color: $secondaryColor;
+    background-color: transparent;
+    color: white;
+    padding: 8px 32px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $primaryColor;
+      background-color: white;
+      border-color: white;
+    }
+  }
+
+}
+
+.form-control:focus {
+  background-color: transparent;
+  outline: 0;
+  box-shadow: unset;
+  border-color: transparent;
+  border-left-color: #ffffff61;
+  color: rgba(255, 255, 255, .7);
+}
+
+
+.dropdown {
+  .btn {
+    height: 100%;
+    background: none;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    color: white;
+    padding-bottom: 2rem;
+
+  }
+
+}
+
+.dropdown_links {
+  position: relative;
+
+  &:hover {
+    &>ul {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  span {
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    color: white;
+    padding-bottom: 2rem;
+  }
+
+  ul {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in;
+    position: absolute;
+    top: 2rem;
+    left: -2rem;
+    z-index: 9999;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0;
+    font-size: 1rem;
+    text-align: left;
+    background-color: #fff;
+    border-radius: 0.25rem;
+
+    li {
+
+      text-transform: capitalize;
+
+      a {
+        padding: 0.25rem 1rem;
+        display: block;
+        cursor: pointer;
+        font-size: .9rem;
+        color: $primaryColor;
+        white-space: nowrap;
+        transition: all .2s ease-in;
+        font-weight: 500;
+
+        &:hover {
+          background-color: $secondaryColor
+        }
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+
+svg {
+  transition: all .4s ease-in-out;
+
+}
+
+
+.mt-6 {
+  margin-top: 4rem !important;
+}
+
+.primaryGradient {
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    background-image: linear-gradient(to top, $primaryColor 1%, $primaryLight1Color 75%, rgba(0, 84, 166, 0) 100%);
+
+  }
+}
+
+
+.primaryGradient-horizontal:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right, #0054A6 1%, rgba(0, 84, 166, 0.5) 80%, rgba(0, 84, 166, 0) 100%);
+}
