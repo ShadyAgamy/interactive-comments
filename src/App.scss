@@ -3,3 +3,10 @@
 @import '../src/sassStyles/animations';
 @import '../src/sassStyles/functions';
 @import '../src/sassStyles/typography';
+
+body {background-color: #F5F6FA;    min-height: 100vh;}
+
+a {
+    text-decoration: unset;
+}
+

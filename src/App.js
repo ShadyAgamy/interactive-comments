@@ -1,5 +1,5 @@
 import React from 'react';
-import HomePage from './pages/Homepage';
+import Comments from './pages/Comments';
 import { Helmet } from 'react-helmet';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -17,7 +17,7 @@ const  App = () => {
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="robots" content="noindex"></meta>
       </Helmet>
-      <HomePage />
+      <Comments />
     </div>
   );
 }
