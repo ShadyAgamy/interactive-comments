@@ -44,6 +44,10 @@
               font-weight: bold;
               display: block;
               margin: 0 1rem;
+              .badge {
+                  background-color: $primaryBlue!important;
+                  margin-left: 5px;
+              }
           }.date {
               font-size: 14px;
               font-weight: 300;

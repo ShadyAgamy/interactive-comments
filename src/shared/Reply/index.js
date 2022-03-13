@@ -8,7 +8,6 @@ import "./styles.scss";
 
 function Reply({ user, currentUser,sumbit }) {
 
-  const {  username } = user;
   const [replyValue, setReplyValue] = useState("");
 
   // const addReply = () => {
@@ -30,7 +29,6 @@ function Reply({ user, currentUser,sumbit }) {
       </Col>
       <Col xs={9} className="comment_content">
         <Form.Control
-          defaultValue={`@${username},`}
           as="textarea"
           style={{ height: "100px", resize: "none" }}
           onChange={(e) => setReplyValue(e.currentTarget.value)}

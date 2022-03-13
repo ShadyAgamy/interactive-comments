@@ -23,7 +23,9 @@ const Comments = () => {
   useEffect(() => {
     getData();
   }, []);
+
 console.log(comments)
+
   const renderComments = () => {
     const orderedComments = comments.comments.sort((a, b) =>  b.score - a.score);
     return orderedComments.map((comment) => {
