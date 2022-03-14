@@ -1,59 +1,66 @@
 @import '../../sassStyles/variables';
 
 .comment {
-      background-color: white;
-      border-radius: 10px;
-      padding: 1.5rem 10px;
-      margin-bottom: 1.5rem;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem 10px;
+    margin-bottom: 1.5rem;
 
-      .vote {
-          background-color: $lightGray;
-          border-radius: 8px;
-          padding: 3px 0;
-          a {
-              cursor: pointer;
+    .vote {
+        background-color: $lightGray;
+        border-radius: 8px;
+        padding: 3px 0;
 
-              &:hover {
+        a {
+            cursor: pointer;
+
+            &:hover {
                 svg path {
-                    fill: $primaryBlue!important;
+                    fill: $primaryBlue !important;
                 }
-              }
-              
-          }
+            }
 
-          span {
-              font-size: 12px;
-              font-weight: bold;
-              color: $primaryBlue;
-              display: block;
-              margin: 4px 0;
-          }
-      }
+        }
 
-      &_content {
-         
+        span {
+            font-size: 12px;
+            font-weight: bold;
+            color: $primaryBlue;
+            display: block;
+            margin: 4px 0;
+        }
+    }
+
+    &_content {
+
         &-info {
             display: flex;
             align-items: center;
             margin-bottom: .8rem;
+
             img {
                 width: 2rem;
             }
-          .name {
-              font-size: 14px;
-              font-weight: bold;
-              display: block;
-              margin: 0 1rem;
-              .badge {
-                  background-color: $primaryBlue!important;
-                  margin-left: 5px;
-              }
-          }.date {
-              font-size: 14px;
-              font-weight: 300;
-              color: $darkBlue;
-          }
+
+            .name {
+                font-size: 14px;
+                font-weight: bold;
+                display: block;
+                margin: 0 1rem;
+
+                .badge {
+                    background-color: $primaryBlue !important;
+                    margin-left: 5px;
+                }
+            }
+
+            .date {
+                font-size: 14px;
+                font-weight: 300;
+                color: $darkBlue;
+            }
         }
+
         .desc {
             font-size: 14px;
             font-weight: 300;
@@ -61,11 +68,47 @@
             padding-right: 4rem;
             line-height: 1.7;
         }
-      }
+    }
 }
 
 
 .replies {
     padding-left: 3rem;
     border-left: 1px solid #e4e6ed;
+}
+
+
+.btn_text.text-red {
+    color: $softRed;
+}
+
+
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 22rem!important;
+        margin: 1.75rem auto;
+    }
+}
+
+.modal-content {
+    padding: 10px;
+    .modal-footer {
+        justify-content: flex-start;
+
+        button {
+            flex: 1 1;
+            text-transform: uppercase;
+            font-size: 14px;
+            padding: 11px 10px;
+            border-radius: 8px;
+            &.secondary {
+                background-color: $darkBlue;
+            }
+
+            &.danger {
+                background-color: $softRed;
+            }
+        }
+    }
 }

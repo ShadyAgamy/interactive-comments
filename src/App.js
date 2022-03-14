@@ -2,6 +2,7 @@ import React from 'react';
 import Comments from './pages/Comments';
 import { Helmet } from 'react-helmet';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.scss';
 
 const  App = () => {
   return (
